@@ -18,6 +18,7 @@ def main(opt):
         for file in files:
             if file.endswith(file_extension):
                 file_path = os.path.join(subdir, file)
+                full_file_name = file_path.replace(subdir,"")
                 full_file_name = file_path.replace("/", "_")
                 full_file_name = full_file_name.replace(".._", "")
                 full_file_name = full_file_name.replace("___", "_")
